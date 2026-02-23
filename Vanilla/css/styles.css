@@ -483,3 +483,210 @@ nav ul {
     grid-template-rows: auto;
   }
 }
+/* Container utility (if not already present) */
+.container {
+  width: min(1080px, 90%);
+  margin: 0 auto;
+}
+
+/* Section headers (reuse from capabilities) */
+.section-kicker {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-main);
+  margin-bottom: var(--spacing2);
+}
+.section-title {
+  font-size: 2.5rem;
+  margin: 0 0 var(--spacing2);
+  color: var(--black-main);
+}
+.section-sub {
+  opacity: 0.7;
+  margin-bottom: var(--spacing5);
+}
+
+/* Partners Section */
+/* Partners Section – single row on desktop */
+.partners {
+  background: var(--gray-main);
+}
+.partner-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  /* even spacing */
+  gap: var(--spacing5);
+  flex-wrap: wrap;                 /* wrap on mobile */
+}
+.partner-logo {
+  max-width: 150px;
+  height: auto;
+  filter: grayscale(1);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.partner-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Desktop: force logos to stay in one row */
+@media (min-width: 901px) {
+  .partner-logos {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Call to Action */
+.cta {
+  background: var(--black-main);
+  color: #fff;
+}
+.cta-title {
+  font-size: 3rem;
+  margin-bottom: var(--spacing3);
+  color: #fff;
+}
+.cta-text {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing4);
+  opacity: 0.9;
+}
+.btn-large {
+  padding: var(--spacing3) var(--spacing6);
+  font-size: 1.2rem;
+}
+
+/* Contact Section – icon cards */
+.contact {
+  background: var(--gray-main);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing5);
+  margin-top: var(--spacing5);
+}
+.contact-card {
+  background: var(--gray-main);
+  padding: var(--spacing5);
+  border-radius: var(--spacing3);
+  border: 2px solid;
+  border-color: var(--green-main);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+.contact-icon {
+  font-size: 2.5rem;
+  color: var(--green-main);
+  margin-bottom: var(--spacing4);
+}
+.contact-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing2);
+  color: var(--black-main);
+}
+.contact-card-desc {
+  color: rgba(0,0,0,0.6);
+  margin-bottom: var(--spacing3);
+  font-size: 0.95rem;
+}
+.contact-card-detail {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--black-main);
+  word-break: break-word;
+}
+
+/* Mobile: stack cards */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing4);
+  }
+}
+
+/* Footer */
+.footer {
+  background: var(--black-main);
+  color: #fff;
+  padding: var(--spacing6) 0 var(--spacing4);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing5);
+  margin-bottom: var(--spacing6);
+}
+.footer-col h4 {
+  color: var(--green-main);
+  margin-bottom: var(--spacing4);
+  font-size: 1.2rem;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: var(--spacing2);
+}
+.footer-col ul li a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: var(--green-main);
+}
+.tagline-col p {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 300px;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing5);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing5);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing5);
+  }
+  .tagline-col {
+    grid-column: span 2;
+    text-align: center;
+  }
+  .tagline-col p {
+    max-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .tagline-col {
+    grid-column: span 1;
+  }
+  .partner-logos {
+    gap: var(--spacing4);
+  }
+  .partner-logo {
+    max-width: 120px;
+  }
+}
