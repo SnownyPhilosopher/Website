@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netsolar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="logo" src="images/logo.png" alt="Netsolar Logo"/>
+        <nav>
+            <ul>
+                <li><a class="a-glass" href="#">Home</a></li>
+                <li><a class="a-glass" href="#">About</a></li>
+                <li><a class="a-glass" href="#">Services</a></li>
+                <li><a class="a-glass" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="hero">
+  <div class="hero-image_wrapper">
+    <video autoplay muted loop class="hero-video">
+      <source src="/Vanilla/videos/hero-video-1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="hero_content-wrapper">
+    <h1>Power the future with clean <br>energy</h1>
+    <p>Netsolar builds the infrastructure that connects renewable energy to the world. We generate, transmit, and distribute power that sustains industries and communities.</p>
+    <a href="#" class="btn">Learn More</a>
+  </div>
+</section>
+    <section class="feature-wrap">
+  <div class="feature-card">
+    <div class="feature-content">
+      <p class="feature-kicker">Foundation</p>
+
+      <h2 class="feature-title">Energy Infrastructure<br/>Built To Last</h2>
+
+      <p class="feature-text">
+        Netsolar operates across the full spectrum of energy delivery, from renewable generation
+        to last-mile distribution. Our infrastructure moves clean power where it's needed most,
+        serving factories, offices, and homes with the reliability they depend on.
+      </p>
+
+      <ul class="feature-points">
+        <li>Sustainable from the ground up</li>
+        <li>Built for decades of service</li>
+        <li>Powering Zambia’s energy transition</li>
+      </ul>
+
+      <a href="#" class="btn btn-outline">Discover</a>
+    </div>
+
+    <div class="feature-media">
+      <img src="images/foundation.jpg" alt="foundation" />
+    </div>
+  </div>
+</section>
+    <section class="capabilities padding7">
+  <div class="cap-container">
+    <div class="cap-head center">
+      <p class="cap-kicker">Capabilities</p>
+      <h2 class="cap-title">What We Deliver</h2>
+      <p class="cap-sub">Three pillars support every megawatt we move</p>
+    </div>
+
+    <div class="cap-grid">
+      <!-- first card -->
+      <article class="cap-card">
+        <img src="images/Capabalilties1.jpg" alt="Generation">
+        <div class="cap-overlay">
+          <p class="cap-tag">Generation</p>
+          <h3>Renewable Generation At Scale</h3>
+          <p class="cap-desc">We harness wind, solar, and hydro resources.</p>
+        </div>
+      </article>
+
+      <!-- Second card -->
+      <article class="cap-card">
+        <img src="images/Capabalilties3.jpg" alt="Transmission">
+        <div class="cap-overlay">
+          <p class="cap-tag">Transmission</p>
+          <h3>High-Voltage Transmission Networks</h3>
+          <p class="cap-desc">Power travels efficiently across vast distances.</p>
+        </div>
+      </article>
+
+      <!-- third card -->
+      <article class="cap-card">
+        <img src="images/Capabalilties2.jpg" alt="Distribution">
+        <div class="cap-overlay">
+          <p class="cap-tag">Distribution</p>
+          <h3>Last-Mile Distribution To Customers</h3>
+          <p class="cap-desc">Energy reaches every business and household.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="feature-wrap">
+  <div class="feature-card">
+    <div class="feature-content">
+      <p class="feature-kicker">Climate</p>
+      <h2 class="feature-title">Thermal Comfort For<br/>Modern Spaces</h2>
+      <p class="feature-text">
+        Beyond power generation, we understand that energy serves a purpose. Climate control systems keep facilities operating at peak efficiency, reducing waste and extending equipment life across industrial and commercial operations.
+      </p>
+      <ul class="feature-points">
+        <li>Sustainable from the ground up</li>
+        <li>Built for decades of service</li>
+        <li>Powering Zambia’s energy transition</li>
+      </ul>
+      <a href="#" class="btn btn-outline">Discover</a>
+    </div>
+    <div class="feature-media">
+      <img src="images/climate.jpg" alt="climate" />
+    </div>
+  </div>
+</section>
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) { // Adjust 50 to the scroll distance you prefer
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+</body>
+</html>

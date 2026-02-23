@@ -1,0 +1,328 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+    --black-main: hsl(212, 74%, 5%);
+    --green-main: hsl(86, 92%, 55%);
+    --gray-main: hsl(76, 19%, 85%);
+    --glass-tint: rgba(255,255,255,0.10);
+    --text-color: #000000;
+    --accent-color: #ffffff;
+
+    --ff: 'Oxanium', sans-serif;
+    --p: 1rem/1.5rem var(--ff);
+    --h1: 600 3rem/1.2em var(--ff);
+    --h2: 600 2rem/1.2em var(--ff);
+
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+}
+
+/* ================= GLOBAL ================= */
+html { scroll-behavior: smooth; }
+
+body {
+    text-wrap: balance;
+    font: var(--p);
+    color: var(--text-color);
+    background-color: var(--accent-color);
+}
+
+h1 { font: var(--h1); }
+h2 { font: var(--h2); margin: var(--spacing2) 0; }
+p { margin: var(--spacing2) 0; }
+
+a {
+    text-decoration: none;
+    color: var(--green-main);
+}
+a:hover { color: var(--black-main); }
+
+img { width: 100%; display: block; }
+
+.accent { color: var(--green-main); }
+
+/* ================= BUTTONS ================= */
+.btn, button {
+    all: unset;
+    display: inline-block;
+    margin: var(--spacing2) 0;
+    padding: var(--spacing2) var(--spacing4);
+    color: var(--green-main);
+    background-color: var(--black-main);
+    border: 1px solid var(--green-main);
+    border-radius: var(--spacing1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.btn:hover, button:hover {
+    background-color: var(--green-main);
+    color: var(--black-main);
+}
+
+.btn.btn-outline {
+    border-radius: 999px;
+}
+
+/* ================= UTILITIES ================= */
+.center { text-align: center; }
+.padding6 { padding: var(--spacing6) 0; }
+.padding7 { padding: var(--spacing7) 0; }
+.margin5 { margin: var(--spacing5) auto; }
+
+/* ================= HEADER ================= */
+header {
+    position: relative;
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: var(--spacing3);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.navbar {
+    width: min(1080px, 90%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing4) var(--spacing5);
+    border-radius: var(--spacing2);
+    background-color: var(--glass-tint);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.logo { width: 80px; }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing4);
+}
+
+.a-glass { color: var(--gray-main); }
+.a-glass:hover { color: #fff; }
+
+.hero {
+    position: relative;
+    z-index: 2;
+    color: var(--gray-main);
+    width: min(1080px, 90%);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing4);
+    text-align: center;
+}
+
+/* ================= FEATURE ================= */
+.feature-wrap {
+    background: var(--black-main);
+    padding: clamp(24px, 5vw, 72px) 0;
+}
+
+.feature-card {
+    width: min(1080px, 90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr;
+    border: 1px solid var(--green-main);
+    border-radius: var(--spacing3);
+    overflow: hidden;
+    background: #070b10;
+}
+
+.feature-left {
+    padding: clamp(var(--spacing4), 4vw, var(--spacing5));
+}
+
+.feature-kicker {
+    color: var(--green-main);
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.feature-title {
+    color: #fff;
+    margin: var(--spacing3) 0;
+}
+
+.feature-text {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ================= CAPABILITIES & SECTIONS ================= */
+.capabilities {
+    background: var(--gray-main);
+}
+
+.cap-container {
+    width: min(1080px, 90%);
+    margin: auto;
+}
+
+.cap-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: var(--spacing4);
+    margin-top: var(--spacing4);
+}
+
+.cap-card {
+    position: relative;
+    border-radius: var(--spacing3);
+    overflow: hidden;
+    min-height: 220px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.cap-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cap-overlay {
+    position: absolute;
+    bottom: 0;
+    padding: var(--spacing3);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    color: #fff;
+}
+
+.cap-overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing1);
+}
+
+.cap-desc {
+    font-size: 0.9rem;
+    opacity: .85;
+}
+
+/* ================= THERMAL & PROJECT SECTIONS ================= */
+.thermal-section {
+    background: var(--black-main);
+    padding: var(--spacing6) 0;
+}
+
+.thermal-card {
+    width: min(1080px, 90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    border: 1px solid var(--green-main);
+    border-radius: var(--spacing3);
+    overflow: hidden;
+}
+
+.thermal-content {
+    padding: var(--spacing5);
+    color: #fff;
+}
+
+/* ================= PARTNERS ================= */
+.partners {
+    background: var(--gray-main);
+}
+
+.partner-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing4);
+    flex-wrap: wrap;
+}
+
+.partner-box {
+    width: 120px;
+    height: 120px;
+    background: var(--black-main);
+    border-radius: var(--spacing2);
+}
+
+/* ================= CTA ================= */
+.cta {
+    position: relative;
+    background: url("../images/cta.jpg") center/cover no-repeat;
+    padding: var(--spacing7) 0;
+    color: #fff;
+    text-align: center;
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+    background: var(--gray-main);
+}
+
+.contact-grid {
+    width: min(1080px, 90%);
+    margin: auto;
+    display: flex;
+    gap: var(--spacing5);
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #fff;
+    border-top: 2px solid var(--green-main);
+    padding: var(--spacing4);
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .feature-card,
+    .thermal-card,
+    .cap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: var(--spacing3);
+    }
+}

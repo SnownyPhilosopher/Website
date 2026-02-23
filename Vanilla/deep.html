@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenlyte · Liquid Solar</title>
+    <!-- Simple, modern font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f8fafc;   /* light background – adjust as needed */
+            color: #0a1a2f;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+
+        /* header / hero area */
+        .hero {
+            margin: 3rem 0 5rem 0;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 5.5rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            background: linear-gradient(145deg, #0b2b44, #217a8a);  /* suggested gradient – change to match brand */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 900px;
+            color: #1e3b5c;
+            font-weight: 400;
+            border-left: 6px solid #52b9ce;
+            padding-left: 2rem;
+        }
+
+        /* section headings */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 4rem 0 2rem 0;
+            color: #0f2b40;
+        }
+
+        .section-subhead {
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #3e7b8f;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* project cards – use case grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 2rem;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 15px 30px -12px rgba(0,40,60,0.15);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(82, 185, 206, 0.15);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 40px -14px rgba(13, 87, 108, 0.25);
+            border-color: rgba(82, 185, 206, 0.4);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #0b3b4a;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: #264e63;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .card .learn-more {
+            display: inline-block;
+            font-weight: 600;
+            color: #1b7f96;
+            text-decoration: none;
+            border-bottom: 2px solid #52b9ce;
+            padding-bottom: 2px;
+            margin-bottom: 1.2rem;
+        }
+
+        .card .learn-more:hover {
+            color: #0a4b5c;
+            border-bottom-color: #0a4b5c;
+        }
+
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #d0e3ec;
+            padding-top: 1.2rem;
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: #3c6579;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #6f8f9f;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: #0f4052;
+        }
+
+        /* story / about section */
+        .story-block {
+            background: #e6f2f7;  /* light alternative – adjust to actual brand tint */
+            border-radius: 3rem;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 1px solid #bddae7;
+        }
+
+        .story-block h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0d3f51;
+        }
+
+        .story-block p {
+            font-size: 1.3rem;
+            color: #154353;
+            max-width: 900px;
+            font-weight: 400;
+        }
+
+        .impact-logs {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #1f697e;
+            padding: 2rem;
+            border: 2px dashed #84becf;
+            border-radius: 4rem;
+        }
+
+        .impact-logs span {
+            background: #eef7fa;
+            padding: 0.5rem 2rem;
+            border-radius: 4rem;
+        }
+
+        /* funding ribbon (based on title tag) */
+        .funding-note {
+            background: #0d3443;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 4rem;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid #4797ae;
+        }
+
+        /* small adjustments */
+        @media (max-width: 600px) {
+            .container { padding: 1.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- funding headline (from page title) -->
+        <div class="funding-note">
+            ⚡ Over €45M in funding · major off-take partnerships · scaling the energy transition
+        </div>
+
+        <!-- main hero -->
+        <div class="hero">
+            <h1>LIQUID SOLAR</h1>
+            <p>By liquefying air, sun, and water into 99% pure fuel feedstocks, we enable synthetic fuels that reach cost parity with fossil fuels, unlocking a future of energy independence, resilience, and scalable decarbonization.</p>
+        </div>
+
+        <!-- PROJECTS section -->
+        <div class="section-subhead">PROJECTS</div>
+        <h2 class="section-title">Deploying the new era of energy</h2>
+
+        <!-- use case cards (exact data from the URL) -->
+        <div class="project-grid">
+            <!-- LiquidSolar SNG -->
+            <div class="card">
+                <h3>LiquidSolar SNG</h3>
+                <p>Turning air into synthetic natural gas — coupling DAC and green hydrogen for scalable, renewable gas production.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+                <div class="meta-row">
+                    <div class="meta-item">
+                        <span class="meta-label">Fuel capacity</span>
+                        <span class="meta-value">5 tons of SNG / year</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Location</span>
+                        <span class="meta-value">Duisburg, Germany</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Planned</span>
+                        <span class="meta-value">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LiquidSolar Methanol -->
+            <div class="card">
+                <h3>LiquidSolar Methanol</h3>
+                <p>Powering shipping and chemistry with air – modular carbon and hydrogen systems delivering renewable e-methanol at scale.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+                <div class="meta-row">
+                    <div class="meta-item">
+                        <span class="meta-label">Fuel capacity</span>
+                        <span class="meta-value">Up to 1,000 t eMethanol</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Location</span>
+                        <span class="meta-value">Marl, Germany</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Planned</span>
+                        <span class="meta-value">2026/2027</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LiquidSolar GigaSAF -->
+            <div class="card">
+                <h3>LiquidSolar GigaSAF</h3>
+                <p>Scaling Liquid Solar to industrial reality – building Greenlyte's first gigawatt-class eSAF plant from air, water, and renewable power.</p>
+                <a href="#" class="learn-more">Learn more →</a>
+                <div class="meta-row">
+                    <div class="meta-item">
+                        <span class="meta-label">Fuel capacity</span>
+                        <span class="meta-value">250 kt eSAF / year</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Location</span>
+                        <span class="meta-value">MENA / Spain</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Planned</span>
+                        <span class="meta-value">2030</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OUR STORY section -->
+        <div class="story-block">
+            <div class="section-subhead">OUR STORY</div>
+            <h2>Turning industrial legacy into clean energy leadership</h2>
+            <p>Born in the industrial heart of Europe, Greenlyte is forging a new path from the Ruhr's legacy. One where innovation drives decarbonization, strengthens energy resilience, and enables clean fuels that shape the future of global energy.</p>
+        </div>
+
+        <!-- IMPACT LOGS (exact as in the footer) -->
+        <div class="impact-logs">
+            <span>IMPACT LOGS</span>
+        </div>
+
+        <!-- subtle note: images are missing – you can add them as background / img tags -->
+        <div style="margin-top: 3rem; font-size: 0.9rem; color: #668a99; text-align: center; border-top: 1px solid #cbdbe6; padding-top: 2rem;">
+            ⚙️ This is a structural recreation based on the provided text. To match the exact design, add your own background images, adjust colors, and include the logo / navigation bar.
+        </div>
+    </div>
+</body>
+</html>

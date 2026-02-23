@@ -1,0 +1,485 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --black-main: hsl(212, 74%, 5%);
+    --green-main: hsl(86, 92%, 55%);
+    --gray-main: hsl(76, 19%, 85%);
+    --white-main: hsl(0, 0%, 100%);
+    --glass-tint: rgba(255,255,255,0.10);
+    --text-color:  #000000;
+    --ff: 'oxanium', sans-serif;
+    --p: 1rem/1.5rem var(--ff);
+    --h1: 600 3rem/1.2em var(--ff);
+    --h2: 600 2rem/1.2em var(--ff);
+    --spacing1: 4px;
+    --spacing2: 8px;
+    --spacing3: 16px;
+    --spacing4: 20px;
+    --spacing5: 40px;
+    --spacing6: 80px;
+    --spacing7: 160px;
+}   
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    text-wrap: balance;
+    font: var(--p);
+    color: var(--text-color);
+    background-color: var(--black-main);
+}
+h1 {
+    font: var(--h1);
+}
+h2 {
+    font: var(--h2);
+    margin: var(--spacing2) 0;
+}
+p {
+    margin: var(--spacing2) 0;
+}
+a {
+    text-decoration: none;
+    color: var(--green-main);
+}
+a:hover {
+    color: var(--black-main);
+}
+.btn, button {
+    all: unset;
+    display: inline-block;
+    margin: var(--spacing2) 0;
+    padding: var(--spacing2) var(--spacing4);
+    color: var(--green-main);
+    background-color: var(--black-main);
+    border: 1px solid var(--green-main);
+    border-radius: var(--spacing1);
+    cursor: pointer;
+}
+.btn:hover, button:hover {
+    background-color: var(--green-main);
+    color: var(--black-main);
+    transition: background-color 0.3s ease-in-out;
+}
+img {
+    width: 100%;
+}
+
+
+/* Utility Classes */
+.center {
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing4);
+    flex-wrap: wrap;
+}
+.flex > * {
+    flex: 1;
+    min-width: 400px;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
+.padding1 {
+    padding: var(--spacing1) 0;
+
+}
+.padding2 {
+    padding: var(--spacing2) 0;
+}
+.padding3 {
+    padding: var(--spacing3) 0;
+}
+.padding4 {
+    padding: var(--spacing4) 0;
+}
+.padding5 {
+    padding: var(--spacing5) 0;
+}
+.padding6 {
+    padding: var(--spacing6) 0;
+}
+.padding7 {
+    padding: var(--spacing7) 0;
+}
+.margin1 {
+    margin: var(--spacing1) auto;
+}
+.margin2 {
+    margin: var(--spacing2) auto;
+}
+.margin3 {
+    margin: var(--spacing3) auto;
+}
+.margin4 {
+    margin: var(--spacing4) auto;
+}
+.margin5 {
+    margin: var(--spacing5) auto;
+}
+.margin6 {
+    margin: var(--spacing6) auto;
+}
+.margin7 {
+    margin: var(--spacing7) auto;
+}
+
+/* Header
+header {
+    background-image: url(/Vanilla/images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: var(--spacing3);
+} */
+
+/* Navbar - Initial transparent state */
+.navbar {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;        /* Changed from relative to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;             /* Gives side margins */
+    max-width: 1400px;      /* Matches hero max-width */
+    margin: 0 auto;         /* Centers the navbar */
+    padding: var(--spacing4) var(--spacing5);
+    border-radius: 0 0 2rem 2rem; /* Optional: rounded bottom corners */
+    z-index: 1000;          /* Ensures it stays above content */
+    
+    /* Fully transparent background */
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar background when scrolled */
+.navbar.scrolled {
+    background-color: var(--glass-tint);      /* Your glass color */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.20);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* Adjust logo color if needed - but your image logo should work fine */
+.logo {
+    width: 80px;
+    /* Add a filter if the logo needs to be lighter/darker on transparent bg */
+}
+
+/* Navigation links - ensure they're visible on transparent navbar */
+nav ul li a {
+    color: var(--white-main); /* Light color for visibility */
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Optional: subtle shadow for readability */
+}
+
+nav ul li a:hover {
+    color: var(--green-main);
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing4);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing4);
+}
+.a-glass:hover {
+    color: var(--black-main);
+}
+
+
+/* Hero section – rounded rectangle container */
+.hero {
+  position: relative;
+  width: 90%;                /* side margins */
+  max-width: 1400px;         /* prevents excessive width */
+  margin: 5rem auto;         /* center with top/bottom space */
+  border-radius: 2rem;       /* large rounded corners */
+  overflow: hidden;          /* clips video to border radius */
+  min-height: 80vh;          /* adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;               /* base text colour */
+}
+
+/* Video wrapper – fills the entire hero */
+.hero-image_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* covers area without stretching */
+}
+
+/* Dark overlay to make text pop (increase opacity for more darkness) */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);  /* darker overlay – adjust to taste */
+  z-index: 1;
+  pointer-events: none;       /* lets clicks pass through to buttons */
+}
+
+/* Content wrapper – now just a plain container, no tile/card styles */
+.hero_content-wrapper {
+  position: relative;
+  z-index: 2;                 /* sits above overlay and video */
+  max-width: 800px;
+  padding: var(--spacing5);
+  text-align: center;
+  /* Removed background, backdrop-filter, border, box-shadow */
+  margin: var(--spacing4);
+}
+
+/* Ensure text is readable against the darkened video */
+.hero_content-wrapper h1,
+.hero_content-wrapper p {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7); /* stronger shadow for contrast */
+}
+
+/* Optional: style the button to stand out on the dark background */
+.hero .btn {
+  background-color: var(--green-main);
+  color: var(--black-main);
+  border: none;
+  font-weight: 600;          /* make it pop a bit more */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.hero .btn:hover {
+  background-color: #fff;
+  color: var(--black-main);
+}
+
+.feature-wrap{
+  background: var(--black-main);
+  padding: clamp(var(--spacing5), 5vw, var(--spacing6)) 0;
+}
+
+.feature-card {
+  width: min(1080px, 90%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.35fr 1.35fr; /* keeps your column ratio */
+  border: 1px solid var(--green-main);
+  border-radius: var(--spacing3);
+  overflow: hidden;
+  background: #070b10;
+}
+
+/* On large screens, the media appears first (visually) */
+.feature-media {
+  order: 1;
+  min-height: 400px;      /* minimum height for the image area */
+  max-height: 600px;      /* maximum height – adjust as needed */
+  height: 100%;
+  overflow: hidden;       /* respects border-radius */
+}
+
+.feature-kicker{
+  color: var(--green-main);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 var(--spacing3);
+}
+
+.feature-title{
+  color: #fff;
+  font-size: clamp(var(--spacing4), 4vw, var(--spacing5));
+  line-height: 1.08;
+  margin: 0 0 var(--spacing3);
+}
+
+.feature-text{
+  color: rgba(255,255,255,0.72);
+  max-width: 46ch;
+  margin: 0 0 var(--spacing3);
+}
+
+.feature-points{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing3);
+  color: rgba(255,255,255,0.68);
+  font-size: 14px;
+}
+
+.feature-points li{
+  margin: var(--spacing2) 0;
+}
+
+.btn.btn-outline{
+  display: inline-block;
+  padding: var(--spacing2) var(--spacing3);
+  border-radius: 999px;
+  border: 1px solid var(--green-main);
+  color: var(--green-main);
+  text-decoration: none;
+}
+
+.feature-content {
+  order: 2;
+  padding: clamp(var(--spacing4), 4vw, var(--spacing5));
+  background: #070b10;
+}
+.feature-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;      /* covers container without distortion */
+}
+
+/* Mobile: stack in source order (content first, media below) */
+@media (max-width: 900px) {
+  .feature-card {
+    grid-template-columns: 1fr;  /* single column */
+  }
+  .feature-content,
+  .feature-media {
+    order: 0;  /* reset to default source order */
+  }
+  .feature-media {
+    min-height: 300px;    /* smaller minimum on mobile */
+    max-height: 450px;
+  }
+}
+/* Capabilities section */
+.capabilities{
+  background: var(--gray-main); /* that off-white/cream look */
+  color: var(--black-main);
+  padding-top: var(--spacing6);
+  padding-bottom: var(--spacing6);
+}
+
+.cap-container{
+  width: min(1080px, 90%);
+  margin: 0 auto;
+}
+
+.cap-head{
+  margin-bottom: var(--spacing6);
+}
+
+.cap-kicker{
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: var(--spacing2);
+}
+
+.cap-title{
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.cap-sub{
+  opacity: 0.7;
+  margin-top: var(--spacing2);
+}
+
+/* The 1-left + 2-right layout */
+.cap-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing4);
+}
+
+.cap-card{
+  position: relative;
+  border-radius: var(--spacing3);
+  overflow: hidden;
+  height: clamp(240px, 30vw, 360px); /* responsive height */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.cap-card img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+/* Frosted text panel at the bottom of each image */
+.cap-overlay{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: var(--spacing4);
+  background: rgba(10, 14, 18, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-top: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.92);
+}
+
+.cap-tag{
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin: 0 0 var(--spacing2);
+}
+
+.cap-overlay h3{
+  margin: 0 0 var(--spacing2);
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.cap-desc{
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Mobile: stack */
+@media (max-width: 900px){
+  .cap-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
