@@ -3,239 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netsolar</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Netsolar - Power the future with clean energy infrastructure in Zambia">
+    <title>Netsolar | Clean Energy Infrastructure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
-        <div class="navbar">
-            <img class="logo" src="images/logo.png" alt="Netsolar Logo"/>
-        <nav>
-            <ul>
-                <li><a class="a-glass" href="#">Home</a></li>
-                <li><a class="a-glass" href="#">About</a></li>
-                <li><a class="a-glass" href="#">Services</a></li>
-                <li><a class="a-glass" href="#">Contact</a></li>
-            </ul>
+        <div class="navbar" id="navbar">
+            <img class="logo" src="images/logo.png" alt="Netsolar home">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-list" id="navList">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <section class="hero">
-  <div class="hero-image_wrapper">
-    <video autoplay muted loop class="hero-video">
-      <source src="/Vanilla/videos/hero-video-1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="hero_content-wrapper">
-    <h1>Power the future with clean <br>energy</h1>
-    <p>Netsolar builds the infrastructure that connects renewable energy to the world. We generate, transmit, and distribute power that sustains industries and communities.</p>
-    <a href="#" class="btn">Learn More</a>
-  </div>
-</section>
-    <section class="feature-wrap">
+    <div class="navbar-spacer"></div>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-image_wrapper">
+                <video autoplay muted loop playsinline class="hero-video" aria-hidden="true">
+                    <source src="videos/hero-video-1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero_content-wrapper">
+                <h1>Power the future with clean energy</h1>
+                <p>Netsolar builds the infrastructure that connects renewable energy to the world. We generate, transmit, and distribute power that sustains industries and communities.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <section class="feature-wrap">
   <div class="feature-card">
     <div class="feature-content">
-      <p class="feature-kicker">Foundation</p>
-
-      <h2 class="feature-title">Energy Infrastructure<br/>Built To Last</h2>
+      <p class="feature-kicker">Solar Installations</p>
+      <h2 class="feature-title">Reliable Energy For Homes & Business</h2>
 
       <p class="feature-text">
-        Netsolar operates across the full spectrum of energy delivery, from renewable generation
-        to last-mile distribution. Our infrastructure moves clean power where it's needed most,
-        serving factories, offices, and homes with the reliability they depend on.
+        We supply and install solar systems for homes and businesses — from compact residential setups to large-scale commercial PV. Every installation begins with a thorough assessment and is tailored to your energy needs, site conditions, and budget.
       </p>
 
       <ul class="feature-points">
-        <li>Sustainable from the ground up</li>
-        <li>Built for decades of service</li>
-        <li>Powering Zambia’s energy transition</li>
+        <li>Hybrid integration (solar + battery + grid/generator)</li>
+        <li>Energy audits and load profiling for accurate design</li>
+        <li>Installation, commissioning, and user training</li>
       </ul>
 
-      <a href="#" class="btn btn-outline">Discover</a>
-    </div>
-
-    <div class="feature-media">
-      <img src="images/foundation.jpg" alt="foundation" />
-    </div>
-  </div>
-</section>
-    <section class="capabilities padding7">
-  <div class="cap-container">
-    <div class="cap-head center">
-      <p class="cap-kicker">Capabilities</p>
-      <h2 class="cap-title">What We Deliver</h2>
-      <p class="cap-sub">Three pillars support every megawatt we move</p>
-    </div>
-
-    <div class="cap-grid">
-      <!-- first card -->
-      <article class="cap-card">
-        <img src="images/Capabalilties1.jpg" alt="Generation">
-        <div class="cap-overlay">
-          <p class="cap-tag">Generation</p>
-          <h3>Renewable Generation At Scale</h3>
-          <p class="cap-desc">We harness wind, solar, and hydro resources.</p>
-        </div>
-      </article>
-
-      <!-- Second card -->
-      <article class="cap-card">
-        <img src="images/Capabalilties3.jpg" alt="Transmission">
-        <div class="cap-overlay">
-          <p class="cap-tag">Transmission</p>
-          <h3>High-Voltage Transmission Networks</h3>
-          <p class="cap-desc">Power travels efficiently across vast distances.</p>
-        </div>
-      </article>
-
-      <!-- third card -->
-      <article class="cap-card">
-        <img src="images/Capabalilties2.jpg" alt="Distribution">
-        <div class="cap-overlay">
-          <p class="cap-tag">Distribution</p>
-          <h3>Last-Mile Distribution To Customers</h3>
-          <p class="cap-desc">Energy reaches every business and household.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-<section class="feature-wrap">
-  <div class="feature-card">
-    <div class="feature-content">
-      <p class="feature-kicker">Climate</p>
-      <h2 class="feature-title">Thermal Comfort For<br/>Modern Spaces</h2>
-      <p class="feature-text">
-        Beyond power generation, we understand that energy serves a purpose. Climate control systems keep facilities operating at peak efficiency, reducing waste and extending equipment life across industrial and commercial operations.
-      </p>
-      <ul class="feature-points">
-        <li>Sustainable from the ground up</li>
-        <li>Built for decades of service</li>
-        <li>Powering Zambia’s energy transition</li>
-      </ul>
-      <a href="#" class="btn btn-outline">Discover</a>
+      <a href="#" class="btn">Discover</a>
     </div>
     <div class="feature-media">
-      <img src="images/climate.jpg" alt="climate" />
-    </div>
-  </div>
-</section>
-<!-- Partners Section -->
-<section class="partners padding6">
-  <div class="container center">
-    <p class="section-kicker">Partners</p>
-    <h2 class="section-title">Who We Trust</h2>
-    <p class="section-sub">Three pillars support every megawatt we move</p>
-    <div class="partner-logos">
-      <!-- Replace with your actual partner logos -->
-      <img src="images/partner1.png" alt="Partner 1" class="partner-logo">
-      <img src="images/partner2.png" alt="Partner 2" class="partner-logo">
-      <img src="images/partner3.png" alt="Partner 3" class="partner-logo">
-      <img src="images/partner4.png" alt="Partner 4" class="partner-logo">
+      <img src="images/foundation.jpg" alt="Solar panels on residential roof">
     </div>
   </div>
 </section>
 
-<!-- Call to Action Section -->
-<section class="cta padding6">
-  <div class="container">
-    <div class="cta-grid">
-      <div class="cta-left">
-        <h2 class="cta-title">Ready To Power Ahead</h2>
-      </div>
-      <div class="cta-right">
-        <p class="cta-text">Let’s talk about your energy needs and how we can help.</p>
-        <a href="#" class="btn btn-large">Get In Touch</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <section class="capabilities padding6">
+            <div class="cap-container">
+                <div class="cap-head center">
+                    <p class="cap-kicker">Capabilities</p>
+                    <h2 class="cap-title">What We Deliver</h2>
+                    <p class="cap-sub">Three pillars support every megawatt we move</p>
+                </div>
+                <div class="cap-grid">
+                    <article class="cap-card">
+                        <img src="images/Capabalilties1.jpg" alt="Wind turbines at dawn">
+                        <div class="cap-overlay">
+                            <p class="cap-tag">Generation</p>
+                            <h3>Renewable Generation At Scale</h3>
+                            <p class="cap-desc">We harness wind, solar, and hydro resources.</p>
+                        </div>
+                    </article>
+                    <article class="cap-card">
+                        <img src="images/Capabalilties3.jpg" alt="High-voltage power lines">
+                        <div class="cap-overlay">
+                            <p class="cap-tag">Transmission</p>
+                            <h3>High-Voltage Networks</h3>
+                            <p class="cap-desc">Power travels efficiently across vast distances.</p>
+                        </div>
+                    </article>
+                    <article class="cap-card">
+                        <img src="images/Capabalilties2.jpg" alt="Urban power distribution">
+                        <div class="cap-overlay">
+                            <p class="cap-tag">Distribution</p>
+                            <h3>Last-Mile To Customers</h3>
+                            <p class="cap-desc">Energy reaches every business and household.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-<!-- Contact Section -->
-<section class="contact padding6">
-  <div class="container">
-    <h2 class="section-title center">Get in touch</h2>
-    <p class="section-sub center">We’re here to help with any questions</p>
-    
-    <div class="contact-grid">
-      <!-- Email Card -->
-      <div class="contact-card">
-        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-        <h3 class="contact-card-title">Email</h3>
-        <p class="contact-card-desc">Send us a message anytime</p>
-        <p class="contact-card-detail">info@netsolar.com</p>
-      </div>
+        <section class="feature-wrap">
+            <div class="feature-card">
+                <div class="feature-content">
+                    <p class="feature-kicker">Energy</p>
+                    <h2 class="feature-title">Renewable Production<br>Solutions</h2>
+                    <p class="feature-text">
+                        We develop and implement solar generation projects intended to supply electricity to the grid or contracted off-takers under structured agreements. Our scope covers project design, procurement, installation, commissioning, and operational planning to deliver consistent generation and bankable performance.
+                    </p>
+                    <ul class="feature-points">
+                        <li>Efficient HVAC integration</li>
+                        <li>Smart building automation</li>
+                        <li>Reduced carbon footprint</li>
+                    </ul>
+                    <a href="#" class="btn">Discover</a>
+                </div>
+                <div class="feature-media">
+                    <img src="images/features-2.jpg" alt="Modern building with climate control systems">
+                </div>
+            </div>
+        </section>
 
-      <!-- Call Card -->
-      <div class="contact-card">
-        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
-        <h3 class="contact-card-title">Call</h3>
-        <p class="contact-card-desc">Mon–Fri, 8am–5pm</p>
-        <p class="contact-card-detail">+260 700 000 000</p>
-      </div>
+        <section class="partners padding6">
+            <div class="container center">
+                <p class="section-kicker">Partners</p>
+                <h2 class="section-title">Trusted Collaborators</h2>
+                <p class="section-sub">We work with leading organisations to deliver excellence</p>
+                <div class="partner-logos">
+                    <img src="images/partner1.png" alt="Partner logo 1" class="partner-logo">
+                    <img src="images/partner2.png" alt="Partner logo 2" class="partner-logo">
+                    <img src="images/partner3.png" alt="Partner logo 3" class="partner-logo">
+                    <img src="images/partner4.png" alt="Partner logo 4" class="partner-logo">
+                </div>
+            </div>
+        </section>
 
-      <!-- Location Card -->
-      <div class="contact-card">
-        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <h3 class="contact-card-title">Office</h3>
-        <p class="contact-card-desc">Visit us during business hours</p>
-        <p class="contact-card-detail">Lusaka, Lusaka, Zambia</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <section class="cta padding6">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-left">
+                        <h2 class="cta-title">Ready To Power Ahead</h2>
+                    </div>
+                    <div class="cta-right">
+                        <p class="cta-text">Let’s talk about your energy needs and how we can help.</p>
+                        <a href="#" class="btn btn-large">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- Column 1: Support -->
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <!-- Column 2: Socials -->
-      <div class="footer-col">
-        <h4>Socials</h4>
-        <ul>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
-      </div>
-      <!-- Column 3: Partners -->
-      <div class="footer-col">
-        <h4>Partners</h4>
-        <ul>
-          <li><a href="#">Partner 1</a></li>
-          <li><a href="#">Partner 2</a></li>
-          <li><a href="#">Partner 3</a></li>
-        </ul>
-      </div>
-      <!-- Column 4: Tagline -->
-      <div class="footer-col tagline-col">
-        <p>Let’s talk about your energy needs and how we can help.</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Netsolar. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-<script>
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) { // Adjust 50 to the scroll distance you prefer
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        <!-- Contact Section – fully clickable inverted cards -->
+        <section class="contact padding6">
+            <div class="container">
+                <h2 class="section-title center">Get in touch</h2>
+                <p class="section-sub center">We’re here to help with any questions</p>
+                <div class="contact-grid">
+                    <a href="mailto:info@netsolar.com" class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                        <h3 class="contact-card-title">Email</h3>
+                        <p class="contact-card-desc">Send us a message anytime</p>
+                    </a>
+                    <a href="tel:+260700000000" class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
+                        <h3 class="contact-card-title">Call</h3>
+                        <p class="contact-card-desc">Mon–Fri, 8am–5pm</p>
+                    </a>
+                    <a href="https://maps.google.com/?q=Lusaka,Zambia" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                        <h3 class="contact-card-title">Office</h3>
+                        <p class="contact-card-desc">Visit us during business hours</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- ===== UPDATED FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Logo + About -->
+                <div class="footer-col footer-logo-col">
+                    <p class="footer-about">Netsolar delivers reliable, clean energy infrastructure across Zambia. From residential solar installations to utility-scale transmission, we power progress sustainably.</p>
+                    <p class="footer-about">Our mission is to accelerate the energy transition through innovation, integrity, and local expertise.</p>
+                </div>
+
+                <!-- Column 2: Navigation + Quick Links -->
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+260700000000">+260 700 000 000</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@netsolar.com">info@netsolar.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lusaka, Zambia</li>
+                    </ul>
+                    <p class="footer-note">Mon–Fri, 8:00–17:00</p>
+                </div>
+
+                <!-- Column 4: Social & Newsletter -->
+                <div class="footer-col">
+                    <h4>Stay Connected</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Netsolar. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navList = document.getElementById('navList');
+
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true' ? false : true;
+                this.setAttribute('aria-expanded', expanded);
+                navList.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (icon) {
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                }
+            });
+
+            navList.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    const icon = menuToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-times');
+                    }
+                });
+            });
         }
-    });
-</script>
+    </script>
 </body>
 </html>
