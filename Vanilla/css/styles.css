@@ -12,9 +12,10 @@
     --white-main: hsl(0, 0%, 100%);
     --glass-tint: rgba(255, 255, 255, 0.08);
     --text-color: #000000;
+    --fh: "Audiowide", sans-serif;
     --ff: 'Oxanium', sans-serif;
     --p: 1rem/1.5rem var(--ff);
-    --h1: 600 3rem/1.2em var(--ff);
+    --h1: 600 4rem/1.2em var(--fh);
     --h2: 600 2rem/1.2em var(--ff);
     --spacing1: 4px;
     --spacing2: 8px;
@@ -253,10 +254,8 @@ img {
     text-align: center;
 }
 
-.hero_content-wrapper h1,
-.hero_content-wrapper p {
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+.hero_content-wrapper h1{
+    color: var(--green-main);
 }
 
 .hero .btn {
