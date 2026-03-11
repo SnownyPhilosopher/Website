@@ -127,7 +127,7 @@ nav ul {
     position: relative;
     z-index: 2;
     color: var(--gray-main);
-    width: min(1080px, 90%);
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;

@@ -208,12 +208,10 @@ img {
 /* HERO */
 .hero {
     position: relative;
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto var(--spacing7);
-    border-radius: 2rem;
+    width: 100%;
+    margin: 0 auto var(--spacing6);
     overflow: hidden;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -483,7 +481,6 @@ img {
 .partner-logo {
     max-width: 160px;
     height: auto;
-    filter: grayscale(1) contrast(0.9);
     opacity: 0.8;
     transition: all 0.3s ease;
 }
