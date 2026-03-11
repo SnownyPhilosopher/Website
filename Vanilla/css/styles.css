@@ -469,7 +469,7 @@ img {
 }
 .section-sub {
     opacity: 0.7;
-    margin-bottom: var(--spacing6);
+    margin-bottom: var(--spacing4);
 }
 .partner-logos {
     display: flex;
